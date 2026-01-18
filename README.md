@@ -124,14 +124,6 @@ if (isOk(specResult)) {
 
 ## Architecture
 
-The library follows a purely functional architecture:
-
-1. **Pure Functions**: All business logic is implemented as pure functions
-2. **Composition via `R.pipe`**: Complex operations built from simple functions
-3. **Immutable Data**: All transformations return new objects
-4. **Effects at Boundaries**: Side effects isolated to server/HTTP edges
-5. **Result Type**: Error handling via `Result<T, E>` (no throwing)
-
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for details.
 
 ## Documentation
@@ -166,18 +158,11 @@ Several similar libraries exist in the ecosystem:
 
 | Feature | Existing Tools | This Library |
 |---------|---------------|--------------|
-| Architecture | Mostly imperative/OOP | Purely functional (Ramda) |
+| Architecture | Mostly imperative/OOP | Purely functional |
 | Error Handling | Exceptions | Result monad |
 | OAuth Support | Limited/varies | Full OAuth 2.1 + PKCE |
 | Runtime | Code generation | Runtime conversion |
 | Composability | Low | High (`R.pipe`) |
-
-**Unique aspects of this library:**
-- Purely functional architecture using Ramda
-- Result monad for type-safe error handling (no exceptions)
-- Runtime library (not code generation)
-- Built-in OAuth 2.1 with PKCE support
-- Highly composable pure functions
 
 ## Development
 
